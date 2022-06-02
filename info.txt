@@ -1,0 +1,28 @@
+EPEVER Tracer 4210AN with RS485 Install On Linux
+
+Key Note - Port speed is 115200, 8,N,1   - NOT 8,E,1
+
+
+Python 3
+
+mbpoll -> https://github.com/epsilonrt/mbpoll
+
+Have to get Linux to see USB / RS485 Adapter as what it really is -> CH343   ->https://github.com/WCHSoftGroup/ch343ser_linux
+
+When plugged in, you get /dev/ttyCH343USB0, and that works.
+
+
+Need to upgrade Node.js to newer version for Node-Red to install, and install newest version of Node-Red (or a fresh node-red install.) in order to use Modbus
+
+Copied souce code for Node-Red from    ->  https://github.com/AdamWelchUK/NodeRedEPEverDashboard
+Modified port settings and was done testing
+
+
+Other little tid-bits;
+
+*make sure to set current date/time with MT50, otherwise daily/month/yearly values will be off
+
+https://github.com/fatyogi/epever-upower-tracer
+
+Extended Codes:
+https://github.com/kasbert/epsolar-tracer/blob/master/pyepsolartracer/registers.py
